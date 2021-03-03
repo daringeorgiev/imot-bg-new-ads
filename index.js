@@ -1,12 +1,13 @@
 const fs = require('fs');
-const Crawler = require("crawler");
+const Crawler = require('crawler');
 const argv = require('minimist')(process.argv.slice(2), {
-    string: ['u', 'd'],
+    string: ['u', 'd', 'f'],
     alias: {
         'u': 'url',
         'p': 'pages',
         'r': 'rateLimit',
-        'd': 'dest'
+        'd': 'dest',
+        'f': 'fileName'
     },
     default: {
         'p': 2,
@@ -122,13 +123,13 @@ function isLastPage(url) {
 
 function writeToFile(ads) {
     const dateString = new Date().toISOString().slice(0, 10);
-    const fileName = 'ads-' + dateString;
+    const fileName = argv.fileName || 'ads-' + dateString;
     const dir = __dirname + '/' + argv.dest;
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir);
     }
 
-    const stream = fs.createWriteStream(dir + '/' + fileName);
+    const stream = fs.createWriteStream(dir + '/' + fileName + '.txt');
     stream.once('open', function () {
         stream.write('# New ads ' + dateString + ' #\n\n');
         console.log('# New ads ' + dateString + ' #\n\n');

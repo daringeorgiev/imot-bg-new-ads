@@ -14,7 +14,7 @@ Node.js and npm are needed.
 
 ### Node
 
-Go on [Node.js](https://nodejs.org/) website and download the installer
+Go on [Node.js](https://nodejs.org/) website and download the installer.
 
 ## Install
 
@@ -24,11 +24,11 @@ Go on [Node.js](https://nodejs.org/) website and download the installer
 
 ## Configure app
 
-Command line settings
+Command line settings:
 
 ### Mandatory
 
-* u - the url address of of the search, wrapped in quotes (e.g. 'https://www.imot.bg/pcgi/imot.cgi?act=1&slink=abcdef&f1=1')
+* u - the url address of of the search wrapped in quotes (e.g. 'https://www.imot.bg/pcgi/imot.cgi?act=1&slink=abcdef&f1=1')
 
 ### Optional
 
@@ -37,6 +37,8 @@ Command line settings
 * r - rate limit in ms (default is 2000)
 
 * d - output folder for the results (default is 'ads')
+
+* f - output file name (default is 'ads-YYYY-MM-DD')
 
 ## Running the project
 
