@@ -1,6 +1,6 @@
 # imot-bg-new-ads
 
-Fixes the sort order by date added and returns only newly added ads on [imot.bg](https://www.imot.bg/pcgi/imot.cgi)
+Console app to extract new ads from [imot.bg](https://www.imot.bg/pcgi/imot.cgi)
 
 ## Motivation
 
@@ -28,7 +28,7 @@ Command line settings:
 
 ### Mandatory
 
-* u - the url address of of the search wrapped in quotes (e.g. 'https://www.imot.bg/pcgi/imot.cgi?act=1&slink=abcdef&f1=1')
+* u - the url address of of the search wrapped in double quotes (e.g. "https://www.imot.bg/pcgi/imot.cgi?act=1&slink=abcdef&f1=1")
 
 ### Optional
 
@@ -36,13 +36,13 @@ Command line settings:
 
 * r - rate limit in ms (default is 2000)
 
-* d - output folder for the results (default is 'ads')
+* d - output folder for the results (default is "ads")
 
-* f - output file name (default is 'ads-YYYY-MM-DD')
+* f - output file name (default is "ads-YYYY-MM-DD")
 
 ## Running the project
 
-    node .\index.js -u 'https://www.imot.bg/pcgi/imot.cgi?act=1&slink=abcdef&f1=1' -p 2
+    node .\index.js -u "https://www.imot.bg/pcgi/imot.cgi?act=1&slink=abcdef&f1=1" -p 2
 
 ## Built With
 
