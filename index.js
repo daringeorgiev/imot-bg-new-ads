@@ -97,8 +97,12 @@ function isNewAd(element) {
 
 function getAdObject(element) {
     const price = element.childNodes[1].children[0].data;
-    const type = element.childNodes[4].children[0].data.replace('Продава ', '');
-    const area = element.childNodes[9].children[0].data.replace('град София, ', '');
+    const type = element.childNodes[4].children[0].data
+        .replace('Продава ', '')
+        .replace('Дава под наем ', '');
+    const area = element.childNodes[9].children[0].data
+        .replace('град ', '')
+        .replace('София, ', '');
     const link = element.childNodes[4].attribs.href.replace('//', '');
     const additionalInfo = getAdditionalInfo(element);
 
